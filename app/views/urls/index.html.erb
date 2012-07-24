@@ -13,3 +13,9 @@
 <% if flash[:message] %>
   <p class="notice"><%= flash[:message] %></p>
 <% end %>
+
+<%@urls.each do |url|%>
+Your original url: <%=url.original_url%>
+short it would be: <%=url.short_url%>
+visited <%=url.visited_counter%> times
+<%end%>

@@ -1,4 +1,9 @@
 class UrlsController < ApplicationController
+  
+  def index
+    @urls = Url.all
+  end
+  
   def create
     puts params
     @url = Url.create(original_url: params[:url][:original_url], 

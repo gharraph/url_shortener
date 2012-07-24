@@ -1,0 +1,15 @@
+<h3>Get me shorter</h3>
+
+<%= form_for Url.new do |f| %>
+  <p>
+    <%= f.label :original_url, "The original URL"  %>
+    <%= f.text_field :original_url %>
+  </p>
+  <p>
+    <%= f.submit "make me shorter" %>
+  </p>
+<% end %>
+
+<% if flash[:message] %>
+  <p class="notice"><%= flash[:message] %></p>
+<% end %>
